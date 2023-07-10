@@ -1,8 +1,9 @@
 .footer {
   background-color: #222;
   color: #fff;
-  padding: 3em;
+  padding: 2em ;
   text-align: center;
+  height: 99px;
 
   .social_list {
     display: flex;
@@ -11,7 +12,7 @@
   }
 
   .social_list li {
-    margin: 0 1em;
+    margin: 0 0.5em;
 
     &:hover {
       color: #ffbb33;
@@ -19,12 +20,12 @@
   }
 
   .social_list svg {
-    font-size: 1.5em;
+    font-size: 1.3em;
     cursor: pointer;
   }
 
   .copy_right {
-    margin-top: 2em;
+    margin-top: 0.3em;
   }
 
   .copy_right span {
