@@ -1,17 +1,20 @@
 import { useNavigate } from 'react-router-dom';
-
 import ProjectForm from '../project/ProjectForm';
 import styles from './NewProject.module.scss';
+
 
 const NewProject = () => {
 
   const history = useNavigate()
 
+
   const createPost = (project) => {
+
     project.cost = 0
     project.services = []
 
-    fetch("http:/http://localhost:5000/projects", {
+
+    fetch("http://localhost:5000/projects", {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -22,10 +25,11 @@ const NewProject = () => {
     .then((data)=> {
       console.log(data)
       //redirect
+      history('/projects', {mensagem: 'Projeto criado com sucesso.'})
     })
     .catch((e)=> console.log(e))
-    
   }
+  
 
   return (
     <div className={styles.newProject_container}>
