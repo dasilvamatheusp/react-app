@@ -8,7 +8,7 @@ const NewProject = () => {
   const history = useNavigate()
 
 
-  const createPost = (project) => {
+    const createPost = (project) => {
 
     project.cost = 0
     project.services = []
@@ -25,7 +25,7 @@ const NewProject = () => {
     .then((data)=> {
       console.log(data)
       //redirect
-      history('/projects', {mensagem: 'Projeto criado com sucesso.'})
+      history('/projects', { state: { message: 'Projeto criado com sucesso!' } })
     })
     .catch((e)=> console.log(e))
   }
