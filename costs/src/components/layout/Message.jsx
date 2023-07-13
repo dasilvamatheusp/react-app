@@ -15,7 +15,7 @@ const Message = ({type, msg}) => {
 
     const timer = setTimeout(()=> {
       setVisible(false)
-    }, 5000)
+    }, 2500)
 
     return ()=> clearTimeout(timer)
 
