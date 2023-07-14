@@ -36,7 +36,7 @@ const Projects = () => {
         setRemoveLoading(true)
       })
       .catch(e => console.log(e))
-    }, 2500);
+    }, 1500);
   }, [])
 
   const removeProject = (id) => {
