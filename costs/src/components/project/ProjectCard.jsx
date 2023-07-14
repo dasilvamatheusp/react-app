@@ -1,34 +1,32 @@
-import styles from './ProjectCard.module.scss'
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ id, name, budget, category, handleRemove }) => {
+import styles from "./ProjectCard.module.scss";
 
+const ProjectCard = ({ id, name, budget, category, handleRemove }) => {
   const remove = (e) => {
-    e.preventDefault()
-    handleRemove(id)
-  }
+    e.preventDefault();
+    handleRemove(id);
+  };
   return (
     <div className={styles.project_card}>
       <h4>{name}</h4>
       <p>
-        <span>
-          Orçamento: R${budget}
-        </span>
+        <span>Orçamento: R${budget}</span>
       </p>
       <p className={styles.category_text}>
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}
       </p>
       <div className={styles.project_card_actions}>
         <Link to={`/projects/${id}`}>
-          <BsPencil/> Editar
+          <BsPencil /> Editar
         </Link>
         <button onClick={remove}>
-         <BsFillTrashFill/> Excluir
+          <BsFillTrashFill /> Excluir
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectCard;
